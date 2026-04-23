@@ -1,0 +1,310 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial;
+  background: #f5f6f8;
+  font-size: 13px;
+}
+
+.app {
+  padding: 16px;
+}
+
+/* LAYOUT */
+.layout {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  align-items: stretch;
+  /* 🔥 IMPORTANT */
+}
+
+.left {
+  flex: 2;
+  min-width: 0;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  /* 🔥 makes card full height */
+}
+
+/* CARD */
+.card {
+  background: white;
+  padding: 16px;
+  border-radius: 10px;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* TITLES */
+.sectionTitle {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.sub {
+  font-size: 12px;
+  color: gray;
+}
+
+/* ROW */
+.row {
+  display: flex;
+  gap: 16px;
+}
+
+/* FIELD */
+.field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+  min-width: 0;
+}
+
+.field.full {
+  margin-top: 12px;
+}
+
+/* LABEL */
+label {
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+/* SECTION LABEL (Outcomes, Follow-up) */
+.sectionLabel {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 14px;
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* INPUTS */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 7px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 12px;
+}
+
+input,
+select {
+  height: 36px;
+}
+
+textarea {
+  height: 80px;
+}
+
+/* TEXTAREA + MIC */
+.textareaWrapper {
+  position: relative;
+}
+
+.micBtn {
+  position: absolute;
+  right: 6px;
+  bottom: 6px;
+  background: #eee;
+  border: none;
+  padding: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* BUTTON */
+.voiceBtn {
+  margin: 8px 0;
+  background: #eef3fb;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* SECTION */
+.sectionBlock {
+  margin-top: 16px;
+}
+
+/* BOX */
+.box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.boxTitle {
+  font-weight: 600;
+}
+
+.empty {
+  font-size: 11px;
+  color: gray;
+}
+
+.sideBtn {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+}
+
+/* ---------------- SENTIMENT ---------------- */
+
+/* ROW */
+.sentimentRow {
+  display: flex;
+  gap: 28px;
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+/* ITEM */
+.sentimentItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  font-size: 12px;
+  color: #555;
+}
+
+/* CIRCLE */
+.circle {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  margin-bottom: 6px;
+  transition: all 0.2s ease;
+}
+
+/* ACTIVE */
+.sentimentItem.active .circle {
+  border-color: #1677ff;
+  background: #e6f0ff;
+}
+
+.sentimentItem.active span {
+  color: #1677ff;
+  font-weight: 600;
+}
+
+/* OPTIONAL COLORS */
+.sentimentItem.positive.active .circle {
+  border-color: #2ecc71;
+  background: #eafaf1;
+}
+
+.sentimentItem.negative.active .circle {
+  border-color: #e74c3c;
+  background: #fdecea;
+}
+
+/* ---------------- FOLLOWUPS ---------------- */
+
+.followups {
+  font-size: 12px;
+  margin-top: 12px;
+}
+
+.followups b {
+  font-weight: 600;
+}
+
+.followups ul {
+  margin-top: 6px;
+  padding-left: 16px;
+}
+
+.followups li {
+  color: #1677ff;
+  /* 🔥 blue bullets */
+  margin-bottom: 4px;
+}
+
+/* ---------------- CHAT PANEL ---------------- */
+
+.chatCard {
+  background: #fff;
+  border-radius: 10px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 520px;
+}
+
+/* HEADER */
+.chatHeader {
+  margin-bottom: 10px;
+}
+
+.chatTitle {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.chatSub {
+  font-size: 12px;
+  color: #777;
+}
+
+/* INFO BOX */
+.chatInfo {
+  background: #e6f4f1;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  color: #333;
+  margin-bottom: auto;
+}
+
+/* INPUT */
+.chatBottom {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.chatBottom input {
+  flex: 1;
+  height: 34px;
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 12px;
+}
+
+.chatBottom button {
+  background: #1677ff;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+}
