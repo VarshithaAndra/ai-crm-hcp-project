@@ -323,4 +323,3 @@ For educational and demonstration purposes.
 ## 👩‍💻 Author
 
 **Varshitha Andra**
-B.Tech CSE | AI & Full Stack Developer
