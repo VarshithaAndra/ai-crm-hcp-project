@@ -228,7 +228,6 @@ The system persists interactions with the following schema:
 
 ## 👩‍💻 Author
 **Varshitha Andra**  
-*Building the future of Enterprise AI*
 
 ---
 
